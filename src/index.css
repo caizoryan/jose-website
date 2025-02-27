@@ -10,7 +10,7 @@
 	padding: 0;
 	margin: 0;
 	font-family: "altivo", sans-serif;
-	color: var(--black)
+	color: var(--green)
 }
 
 .container {
@@ -39,11 +39,55 @@
 }
 
 .title-text {
-	font-size: 3em;
+	font-size: 4em;
 	font-weight: 500;
 	color: var(--green);
+	padding: .5em;
+}
+
+.project-page-title {
+	font-size: 4em;
+	font-weight: 500;
+	color: var(--green);
+	padding: .5em;
+	margin-top: .5em;
+}
+
+.project-page-image-container {
+	padding: 1em;
+	overflow-y: scroll;
+	height: 80vh;
+	width: 100vw;
+}
+
+.project-page-image-container img {
+	width: 40vw;
 	padding: 1em;
 }
+
+.slide-fade-enter-active,
+.slide-fade-exit-active {
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.slide-fade-enter,
+.slide-fade-exit-to {
+	transform: translateX(10px);
+	opacity: 0;
+}
+
+.slide-fade-enter {
+	transform: translateX(-10px);
+}
+
+.close {
+	position: absolute;
+	left: 2em;
+	top: 2em;
+
+	cursor: pointer;
+}
+
 
 .left {
 	/* border: 1px solid red; */
@@ -87,12 +131,16 @@
 	color: white;
 }
 
-.images {
+.floating {
 	margin: 1.5em;
 }
 
 .images:last-child {
 	border-bottom: 1px solid var(--green);
+}
+
+.images .text-head {
+	border-bottom: none;
 }
 
 .text {
@@ -112,6 +160,16 @@
 	padding: .2em;
 }
 
+.project-page {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+	z-index: 100;
+}
+
 .text-head {
 	height: var(--block-size);
 	font-size: 1.5em;
@@ -121,7 +179,6 @@
 	padding: 1em;
 	/* width: 100%; */
 	border: 1px solid var(--green);
-	border-bottom: none;
 }
 
 .hover-image {
