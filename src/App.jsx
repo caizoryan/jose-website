@@ -10,8 +10,8 @@ let data = [
   {
     title: "Booklet",
     images: [
-      "./assets/booklet_0.png",
       "./assets/booklet_1.png",
+      "./assets/booklet_0.png",
       "./assets/booklet_2.png",
       "./assets/booklet_3.png",
       "./assets/booklet_4.png",
