@@ -30,7 +30,6 @@ function TitleBar() {
       <div class="title-text"> 360 Bike Safety </div>
     </div>
   )
-
 }
 
 function Contents() {
@@ -58,7 +57,7 @@ function About() {
 
 function Images() {
   return (<div class="images">
-    <div class="text">Images</div>
+    <div class="text-head"> <div class="number">3</div>Resources</div>
     <For each={data}>
       {(e) => <Project title={e.title} images={e.images}></Project>}
     </For>
@@ -82,7 +81,9 @@ function Project(props) {
       </Show>
     </div>
   )
+}
 
+function SplashScreen() {
 
 }
 
