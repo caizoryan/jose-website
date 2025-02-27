@@ -26,6 +26,12 @@ let data = [
   }
 ]
 
+let about = [
+  `One of the most present short-comings of our modern infrastructure is the compromise in safety that the disconnection between set traffic laws and current safety demands has created in day-to-day life.`,
+  `By this, I mean that our current traffic infrastructure can no longer keep up with the safety demands created by the new types of drivers and their respective safety requirements. The road infrastructure established across most of the North-American continent by the 1930s was built for one type of road user: automobiles. This was done, of course, for good reason— at the time, automobiles were the fastest and most efficient way to get around, as cities could not yet be traversed quickly or comfortably otherwise and, as they grew, so did our dependency on vehicles.`,
+  `Almost a century later, we've developed alternate forms of transportation alongside the framework for them. The issue is, improper implementation of these alternative forms of transportation has resulted in a inherent friction between the different types of road users (now automobiles, cyclists, and pedestrians). `
+]
+
 let [selected, setSelected] = createSignal(undefined)
 createEffect(() => console.log(selected()))
 
@@ -58,6 +64,11 @@ function Contents() {
 function About() {
   return (<div class="floating">
     <div class="text-head"> <div class="number">1</div>About</div>
+    <div class="text">
+      <For each={about}>
+        {(e) => <p>{e}</p>}
+      </For>
+    </div>
   </div>)
 }
 

@@ -135,6 +135,17 @@
 	margin: 1.5em;
 }
 
+.text {
+	padding: 1em;
+	border: 1px solid var(--green);
+	border-top: none;
+	background-color: white;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
 .images:last-child {
 	border-bottom: 1px solid var(--green);
 }
@@ -143,9 +154,6 @@
 	border-bottom: none;
 }
 
-.text {
-	height: var(--block-size);
-}
 
 .number {
 	background-color: var(--green);
